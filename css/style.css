@@ -25,5 +25,158 @@ html {
 }
 
 body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    height: 100vh;
+    width: 100vw;
+
     font-size: 1.8rem;
+    background-color: var(--very-dark-blue-main);
+    color: var(--soft-blue);
+}
+
+a {
+    text-decoration: none;
+}
+
+.card {
+    background-color: var(--very-dark-blue-card);
+    padding: 2.5rem;
+    border-radius: 1.2rem;
+    box-shadow: 0px 10px 40px -10px hsla(217, 54%, 11%, 0.4);
+}
+
+.card-content {
+    max-width: 302px;
+}
+
+header {
+    position: relative;
+    display: flex;
+    justify-content: center;
+}
+
+header img {
+    border-radius: 1.2rem;
+    width: 100%;
+    height: auto;
+    cursor: pointer;
+}
+
+.overlay {
+    position: absolute;
+    display: flex;
+    justify-content: center;
+
+    z-index: 99;
+
+    height: 100%;
+    width: 100%;
+
+    border-radius: 1.2rem;
+    cursor: pointer;
+
+    background: url('../images/icon-view.svg') no-repeat;
+    background-size: 0;
+    background-position: center;
+    transition: all 0.2s ease;
+}
+
+.overlay:hover {
+    background-color: var(--cyan);
+    background-size: 46px;
+
+    opacity: 0.6;
+}
+
+.overlay img {
+    align-self: center;
+    width: 46px;
+    height: fit-content;
+    visibility: hidden;
+}
+
+.overlay img:hover {
+    visibility: visible;
+}
+
+.card-descrip {
+    margin: 2.8rem 0rem;
+}
+
+.card-descrip h1 {
+    font-size: 2.2rem;
+    font-weight: 600;
+    color: var(--white);
+}
+
+.card-descrip h1:hover,
+footer a:hover {
+    color: var(--cyan);
+}
+
+.card-descrip p {
+    font-weight: 200;
+    line-height: 2.8rem;
+    margin-top: 2rem;
+}
+
+.data-card {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    margin-bottom: 2.6rem;
+    font-size: 1.6rem;
+}
+
+.data-eth {
+    display: flex;
+    align-items: center;
+
+    color: var(--cyan);
+}
+
+.data-eth img,
+.data-posted img {
+    margin-right: 0.8rem;
+}
+
+.data-posted {
+    display: flex;
+    align-items: center;
+}
+
+hr {
+    border-top: 1px solid var(--very-dark-blue-line);
+}
+
+footer {
+    display: flex;
+    align-items: center;
+
+    margin-top: 1.6rem;
+    font-size: 1.6rem;
+}
+
+footer img {
+    height: 34px;
+    width: 34px;
+
+    margin-right: 1.6rem;
+
+    border: 2px solid var(--white);
+    border-radius: 50%;
+}
+
+footer a {
+    color: var(--white);
+}
+
+@media (max-width: 400px) {
+    .card {
+        margin: 2rem;
+    }
 }
